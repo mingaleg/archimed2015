@@ -1,0 +1,59 @@
+\section{Задача <<Слова не пройдут>>}
+
+
+\begin{frame}
+    \begin{center}
+        \Huge Задача <<Слова не пройдут>>
+    \end{center}
+    ~\\~\\
+    \begin{center}
+        Автор задачи: Олег~Мингалёв\\
+        Автор условия: Елизавета~Игнатьева\\
+        Автор тестов: Александр~Тимин
+    \end{center}
+\end{frame}
+
+\subsection{Постановка задачи}
+
+\begin{frame}
+    \frametitle{Постановка задачи}
+
+    \begin{itemize}
+        \item Из исходной строки $s$ получили строку $s'$, заменив некоторые символы по следующему правилу:
+        \begin{itemize}
+            \item e $\Rightarrow$ 3
+            \item o $\Rightarrow$ 0
+            \item i $\Rightarrow$ 1
+            \item t $\Rightarrow$ 7
+            \item a $\Rightarrow$ 4
+            \item s $\Rightarrow$ 5
+        \end{itemize}
+        \item Даны строки $s'$ и $t$; возможно ли, что строка $t$ входила в $s$ до выполненных замен?
+    \end{itemize}
+\end{frame}
+
+\subsection{Решение}
+
+\begin{frame}
+    \frametitle{Реализация}
+
+    \begin{itemize}
+        \item Выполним обратные замены:
+        \begin{itemize}
+            \item 3 $\Rightarrow$ e
+            \item 0 $\Rightarrow$ o
+            \item 1 $\Rightarrow$ i
+            \item 7 $\Rightarrow$ t
+            \item 4 $\Rightarrow$ a
+            \item 5 $\Rightarrow$ s
+        \end{itemize}
+        \item Проверим, встречается ли строка $t$ в полученной строке.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge Вопросы?
+    \end{center}
+\end{frame}
+

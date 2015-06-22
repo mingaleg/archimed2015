@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="11" short-name="tomandjerry" url="https://polygon.codeforces.com/p/Captain/tomandjerry">
+    <names>
+        <name language="russian" value="Том и Джерри"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz" cpu-speed="3600" input-file="" output-file="">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>67108864</memory-limit>
+            <test-count>16</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen 5 5 1 5 1 1 1 5 2 -2" method="generated"/>
+                <test cmd="gen 5 5 1 3 1 1 3 5 2 -3" method="generated"/>
+                <test cmd="gen 5 5 1 3 1 1 4 5 1 -4" method="generated"/>
+                <test cmd="gen 3 4 1 3 1 1 1 3 1 -5" method="generated"/>
+                <test cmd="gen 10 6 4 10 2 1 1 3 1 -6" method="generated"/>
+                <test cmd="gen 10 6 4 10 2 1 4 4 2 -7" method="generated"/>
+                <test cmd="gen 10 6 4 10 2 1 10 10 1 -8" method="generated"/>
+                <test cmd="gen 100 100 5 25 20 10 3 40 10 -9" method="generated"/>
+                <test cmd="gen 100 100 5 25 1 21 10 15 6 -10" method="generated"/>
+                <test cmd="gen 100 100 5 25 20 10 3 4 10 -11" method="generated"/>
+                <test cmd="gen 100 100 5 25 1 21 26 99 6 -12" method="generated"/>
+                <test cmd="gen 1 4 1 1 1 1 1 1 1 -11" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.py" type="python.3"/>
+                <binary path="files/gen.pys3" type="pythonx.3"/>
+            </executable>
+            <executable>
+                <source path="files/validate.cpp" type="cpp.g++"/>
+                <binary path="files/validate.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::yesno.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validate.cpp" type="cpp.g++"/>
+                <binary path="files/validate.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/moi_sol.py" type="python.3"/>
+                <binary path="solutions/moi_sol.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/moi_sol_cpp.cpp" type="cpp.g++"/>
+                <binary path="solutions/moi_sol_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/tomandjerry_at.py" type="python.2"/>
+                <binary path="solutions/tomandjerry_at.pys2" type="pythonx.2"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/tomandjerry_at_wa.py" type="python.2"/>
+                <binary path="solutions/tomandjerry_at_wa.pys2" type="pythonx.2"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="false"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <documents>
+        <document path="documents/description.txt" type="text/plain"/>
+    </documents>
+</problem>
